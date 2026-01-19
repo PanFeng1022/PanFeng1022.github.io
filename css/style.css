@@ -454,3 +454,146 @@ footer {
         padding: 12px;
     }
 }
+/* ========== 左侧固定侧边栏样式 ========== */
+.sidebar {
+    position: fixed; /* 固定定位，不随滚动移动 */
+    left: 0;
+    top: 0;
+    height: 100vh; /* 占满整个视口高度 */
+    width: 280px; /* 侧边栏宽度，可自定义 */
+    background-color: white; /* 背景色，与页面风格统一 */
+    box-shadow: 2px 0 12px rgba(0,0,0,0.08); /* 右侧阴影，提升层次感 */
+    padding: 60px 20px; /* 内边距，上下留空，左右对齐 */
+    box-sizing: border-box;
+    z-index: 999; /* 层级低于导航栏，避免遮挡导航 */
+    overflow-y: auto; /* 小屏幕下侧边栏内容过多时可滚动 */
+}
+
+/* 侧边栏内部容器（居中对齐） */
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 侧边栏头像样式（微调大小，保持原有风格） */
+.sidebar-profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border: 4px solid white;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar-profile-photo:hover {
+    transform: translateY(-5px);
+}
+
+/* 侧边栏个人信息样式 */
+.sidebar-info h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.sidebar-title {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 6px;
+    line-height: 1.5;
+    align-items: center; /* 子元素水平居中 */
+    text-align: center;  /* 文字内容居中 */
+}
+
+/* 侧边栏联系方式样式 */
+.sidebar-contact {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: center; /* 子元素水平居中 */
+    text-align: center;  /* 文字内容居中 */
+}
+
+/* ========== 右侧主内容区样式调整（留出侧边栏空间） ========== */
+.main-content {
+    max-width: 900px;
+    margin: 80px 20px 30px 300px; /* 左侧margin等于侧边栏宽度+20px，避免重叠 */
+    box-sizing: border-box;
+}
+
+/* 调整原有nav样式，适配侧边栏（可选，优化导航栏位置） */
+.nav-container {
+    max-width: calc(100% - 300px); /* 减去侧边栏宽度，避免导航栏过宽 */
+    margin: 0 auto 0 300px; /* 左侧对齐侧边栏右侧 */
+}
+
+/* ========== 自适应样式调整（移动端隐藏侧边栏，恢复原有布局） ========== */
+@media (max-width: 992px) {
+    /* 移动端隐藏固定侧边栏 */
+    .sidebar {
+        display: none;
+    }
+
+    /* 恢复主内容区布局，无左侧margin */
+    .main-content {
+        margin: 80px auto 30px;
+        max-width: 900px;
+    }
+
+    /* 恢复导航栏布局 */
+    .nav-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* 重新显示原有头部信息（移动端适配，避免信息缺失） */
+    header {
+        display: block !important;
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        margin-bottom: 30px;
+        border: 1px solid rgba(0,0,0,0.03);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .profile {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+    }
+
+    .profile-image-photo {
+        width: 180px;
+        height: 180px;
+        border-radius: 16px;
+        object-fit: cover;
+        flex-shrink: 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        border: 4px solid white;
+        transition: transform 0.3s ease;
+    }
+
+    .profile-image-photo:hover {
+        transform: translateY(-5px);
+    }
+
+    .profile-info {
+        flex: 1;
+    }
+}
+
+/* 隐藏原有header（桌面端使用侧边栏，无需原有header） */
+header {
+    display: none;
+}

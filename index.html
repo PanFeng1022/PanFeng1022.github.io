@@ -13,7 +13,36 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <!-- 导航栏 -->
+    <!-- 新增：左侧固定侧边栏（头像 + 个人基本信息） -->
+    <aside class="sidebar">
+        <div class="sidebar-container">
+            <img src="images/profile.jpg" alt="Pan Feng" class="sidebar-profile-photo">
+            <div class="sidebar-info">
+                <h1>Pan Feng (冯盼)</h1>
+                <div class="sidebar-title">Ph.D. Student</div>
+                <div class="sidebar-title">School of Cyber Science and Engineering</div>
+                <div class="sidebar-title">Southeast University</div>
+                
+                <div class="sidebar-contact">
+                    <div class="contact-item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <a>NanJing,China</a>
+                    </div>                    
+                    <div class="contact-item">
+                        <i class="bi bi-envelope-fill"></i>
+                        <a href="mailto:fp_1022@seu.edu.cn">fp_1022@seu.edu.cn</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="bi bi-google"></i>
+                        <a href="https://scholar.google.com/citations?hl=en&user=NQzVlS8AAAAJ" target="_blank">Google Scholar</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 导航栏（保留，微调位置适配侧边栏） -->
     <nav>
         <div class="nav-container">
             <div class="nav-name">Pan Feng</div>
@@ -25,31 +54,8 @@
         </div>
     </nav>
 
-    <div class="container">
-        <!-- 头部个人信息（固定内容） -->
-        <header>
-            <div class="profile">
-                <img src="images/profile.jpg" alt="Pan Feng" class="profile-image-photo">
-                <div class="profile-info">
-                    <h1>Pan Feng (冯盼) </h1>
-                    <div class="title">Ph.D. Student</div>
-                    <div class="title">School of Cyber Science and Engineering</div>
-                    <div class="title">Southeast University</div>
-                    
-                    <div class="contact">
-                        <div class="contact-item">
-                            <i class="bi bi-envelope-fill"></i>
-                            <a href="mailto:fp_1022@seu.edu.cn">fp_1022@seu.edu.cn</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="bi bi-google"></i>
-                            <a href="https://scholar.google.com/citations?hl=en&user=NQzVlS8AAAAJ" target="_blank">Google Scholar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
+    <!-- 右侧滚动内容区（原有内容，调整margin-left留出侧边栏空间） -->
+    <div class="main-content">
         <!-- 内容容器：空的，由外部JS动态填充 -->
         <section id="about">
             <h2>About Me</h2>
