@@ -1,0 +1,36 @@
+name: 自动同步上游仓库更新
+on:
+  # 方案A：定时触发（每6小时检测一次，可修改 cron 表达式）
+  schedule:
+    - cron: '0 */6 * * *'  # cron 表达式格式：分 时 日 月 周，此处表示每6小时整点执行
+  # 方案B：手动触发（可选，需要时可在 GitHub 仓库手动运行该工作流）
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤1：检出当前 fork 仓库的代码
+      - name: 检出仓库代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 拉取完整的仓库历史，方便合并
+
+      # 步骤2：配置 Git 身份（用于提交合并后的代码）
+      - name: 配置 Git 身份
+        run: |
+          git config --global user.name "PanFeng1022"
+          git config --global user.email "fp.1022hh@gmail.com"
+
+      # 步骤3：添加上游仓库远程源并拉取最新代码
+      - name: 拉取上游仓库更新
+        run: |
+          git remote add upstream https://github.com/FengRan1114/FengRan1114.github.io.git
+          git fetch upstream
+
+      # 步骤4：合并上游仓库更新并推送到当前 fork 仓库
+      - name: 合并并推送更新
+        run: |
+          git checkout main  # 切换到需要同步的分支（对应上游仓库的主分支，如 master）
+          git merge --no-edit upstream/main  # --no-edit 表示无需手动编辑合并提交信息
+          git push origin main
