@@ -446,8 +446,8 @@ footer {
 
 /* ========== 右侧主内容区样式调整（留出侧边栏空间） ========== */
 .main-content {
-    max-width: 900px;
-    margin: 80px 20px 30px 300px; /* 左侧margin等于侧边栏宽度+20px，避免重叠 */
+    max-width: 1000px;
+    margin: 20px 20px 30px 300px; /* 左侧margin等于侧边栏宽度+20px，避免重叠 */
     box-sizing: border-box;
 }
 
