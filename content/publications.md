@@ -1,6 +1,4 @@
 Trustworthy Fog: A Reputation-Based Consensus Method for IoT with Blockchain and Fog Computing | <strong>P. Feng</strong>, Y. L. Ma, B. Li, B. F. Han, T. Fang | Computers and Electrical Engineering, vol. 120, p. 109749, 2024
-PBFL: A Privacy-Preserving Blockchain-Based Federated Learning Framework with Homomorphic Encryption and Single Masking | B. F. Han, B. Li, R. Jurdak, P. Y. Zhang, H. Zhang, <strong>P. Feng</strong>, C. Yuen | IEEE Internet of Things Journal, 2025
-Repeated Game-Based Long-Term Incentive Mechanism for Blockchain-Enabled Reliable Federated Learning in IIoT | B. F. Han, B. Li, Y. Zhang, <strong>P. Feng</strong>, K. Wolter, H. Zhang, Y. Q. Li, R. Jurdak, C. Yuen | IEEE Internet of Things Journal, 2025
 A Food Traceability System Based on Blockchain and Radio Frequency Identification Technologies | M. L. Deng, <strong>P. Feng</strong> | Journal of Computer and Communications, vol. 8, no. 9, pp. 17–27, 2020
 Research on a Traceability Scheme for a Grain Supply Chain | M. L. Deng, <strong>P. Feng</strong> | Journal of Sensors, vol. 2021, Article ID 8860487, 2021
 Design and Implementation of Grain Traceability Code Coding Scheme | M. L. Deng, <strong>P. Feng</strong> | Proceedings of the 2nd International Conference on Industrial Control Network and System Engineering Research, pp. 5–9, 2020
