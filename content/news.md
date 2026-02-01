@@ -1,2 +1,1 @@
-2026-01 | Created Personal  Homepage 🎇 | I have successfully created my personal  homepage to showcase my research achievements and academic progress.
-2026-01-26 | 全世界最虚伪的人就是我的师兄，哈哈哈！ | 删掉他的论文，干净多了。
+2026-01-19 | Created Personal  Homepage 🎇 | I have successfully created my personal  homepage to showcase my research achievements and academic progress.
